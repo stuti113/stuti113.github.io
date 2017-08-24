@@ -305,7 +305,7 @@
       function search() {
         var search = {
           bounds: map.getBounds(),
-          types: ['bank']
+          types: ['bank','accounting','atm']
         };
 
         places.nearbySearch(search, function(results, status) {
@@ -383,7 +383,7 @@
         icon.src = "piggymoney.png";
         icon.setAttribute('class', 'placeIcon');
         icon.setAttribute('className', 'placeIcon');
-	        var name = document.createTextNode(result.name);}
+	var name = document.createTextNode(result.name);}
         iconTd.appendChild(icon);
         nameTd.appendChild(name);
         tr.appendChild(iconTd);
