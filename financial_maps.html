@@ -328,8 +328,7 @@
               markers[i].placeResult = results[i];
               google.maps.event.addListener(markers[i], 'click', showInfoWindow);
               setTimeout(dropMarker(i), i * 100);
-              addResult(
-              	[i], i);
+              addResult(results[i], i);
             }
           }
         });
