@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pinterest Fieldtrip</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+    #headerFont {
+      font-size: 34px;
+      font-family: Georgia;
+      font-weight: bolder;
+      color: #ffffff;
+    }
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Georgia;
+
+
+}
+
+/* Style the header */
+.header {
+    background-color: #ff0000;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder; color:#fff; font: 52px Georgia;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    color: #ff0000;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.imgslideshow ul li{
+  display: inline;
+  list-style: none;
+  padding: 20px;
+
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width:600px) {
+    .column {
+        width: 100%;
+
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Pinterest Fieldtrip</h1>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #fff;
+      height: 100%;
+    }
+    #newFont {
+      font-size: 18px;
+      font-family: Georgia;
+    }
+
+    #footerFont {
+      font-size: 16px;
+      font-family: Georgia;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    #headingFont {
+      font-size: 18px;
+      font-family: Georgia;
+      font-weight: bold;
+
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #ff0000;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+        color: white;
+      }
+      .row.content {height: auto;}
+    }
+    /*.p {
+      font-weight: bold; color:#191970; font: 20px Montserrat, sans-serif;
+}*/
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 ">
+      <h4>Stuti's Personal Website</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="#section2">GWC Summer</a></li>
+        <li><a href="#section3">Financial Math Scratch Page</a></li>
+        <li><a href="#section3">Financial Map</a></li>
+      </ul><br>
+      <!-- <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div> -->
+    </div>
+
+    <div class="col-sm-9">
+      <!-- <h4><small>RECENT POSTS</small></h4> -->
+      <hr>
+      <h2 id="headingFont">First Impression</h2>
+      <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
+      <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
+      <p id="newFont">Going to pinterest was my favorite fielstrip with GWC ever! Although all engagement opportunities excite me because we get to meet inspiring people working in
+      Tech, for some reason I was especially excited about pinterest. This was the first photo I took within the first time minutes of entering the office.<br> <img src="stutipin.jpg",float="left",height="20%", width="20%"> <br> Look how happy I am! I was so impressed by the lobby aesthetic. And I could only imagine how beautiful the rest of the campus would be. "You looked very excited, Stuti!" is what one of the students said to me when she noticed how I was suddenly acting half my age. I quickly regained my compusure and 'teacherly' stature when our host came to invite us in! </p>
+      <br>
+
+      <!-- <h4><small>Best Welcome!</small></h4> -->
+      <hr>
+      <h2 id="headingFont">Best Welcome Ever!</h2>
+      <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+      <h5><span class="label label-success">Lorem</span></h5><br> -->
+      <p id="newFont">Our excitement grew as we saw this sign. Our host invited us to a buffet breakfast laid out for us and the employees. Although our sponsor company(and really evert big tech company at this point!)has free food and fancy espresso machines, we were especially impressed by the food at Pinterest. I was being a dork about the flaored and sparkling water machine. Such an amazing use of technology! We ate delicious breakfast, mingled with other girls who code classroom, and continued to be awestruck by the cute office aesthetic.</p>
+      <div class="imgslideshow">
+      <ul>
+        <li><img src="welcomepin.jpg",height="20%", width="20%">  </li>
+        <li><img src="pin1.jpg",height="20%", width="20%">  </li></li>
+        <li><img src="pin5.jpg",height="20%", width="20%">  </li></li>
+
+      </ul>
+    </div>
+    <hr>
+
+    <h2 id="headingFont">Tour of the office space and Panel</h2>
+    <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
+    <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
+    <p id="newFont">We were then split into teams and assigned a tour guide to take us around. I recall that our tour guide was a spanish pinmployee. She spoke eloquently and opened her introduction by asking us to guess the countries Pinterest is expanding it. It was interesting to learn that despite being a relatively young company
+    Pinterest is reaching so far! We then walked around and saw more beautiful things. My two favorite things were the knitting station and the wine themed office. A lot of my students were so hapy to learn that the office is dog friendly. We then proceeded towards the panel discussion led by about 6 female pinployees. They talked about their experience and future aspirations. This is where my pincrush(sorry for all the pinterest puns!) went beyond than what some might call a superficial interest. Apart from being extremely aesthetically pleasing, pinterest is also full of skilled software engineers, mathematicians, and creators. At girls who code graduation our keynote speaker gave a speech and talked about how companies in future would look prefer STEAM majors over just STEM majors, that extra A being art. And I think companies like pinterest are already showing this trait that is anticipated to be desirable in future. Our tour guide pointed out how all the posters and pictures on the walls were for a campaign and all the photographers and models were actual pinterest employees. I was extremely inspired by the varied backgrounds and life stories of the panelists and for once, I didn't see as much gender disparity as I usually see when I tour a tech company office. They also value creativity and art. Our tour guide told us how employees often come to the knitting nook and create their own things or do pinterest crafts.</p>
+    <div class="imgslideshow">
+    <ul>
+      <li><img src="gelinepin.jpg",height="20%", width="20%">  </li>
+      <li><img src="pin3.jpg",height="20%", width="20%">  </li></li>
+      <li><img src="pin16.jpg",height="20%", width="20%">  </li></li>
+
+    </ul>
+  </div>
+  <hr>
+  <h2 id="headingFont">Bye Pinterest!</h2>
+  <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
+  <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
+  <p id="newFont">The fieldtrip ended right after the panel and we said our final goodbye. We were still not done taking pictures though! So we did that next before heading to our bus! I remember posting all these pictures on my instagram with the caption "Best field trip ever! Hoping to call this cuteness my office someday in future :)". I really hope that happens because I'd love to work in a diverse and creative workspace.
+  <br><img src="byepinterest.jpg",height="20%", width="20%"></p>
+  <br>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <center> <p id="footerFont"> <a id="footerFont"href="https://www.pinterest.com/sgi311/">Check out my pinterest page!</a></p></center>
+
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
