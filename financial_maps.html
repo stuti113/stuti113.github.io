@@ -18,7 +18,7 @@
 	  bottom: 0;
 	  left: 0;
 	  padding: 1rem;
-	  background-color: #DAA520;
+	  background-color: #fff;
 	  text-align: center;
 	  font-weight: bold; color:#191970; font: 20px Montserrat, sans-serif;
 		
@@ -472,7 +472,13 @@
     <p class="explain"> This is a financial map! We know planning and managing finances by yourself can be overwhelming. So you can just visit this page, type in an address, and all the financial advisors, bankers, and ATMs that are close to that address will show up on this map. You can click on the piggy bank icon to get more information on that financial service- their address, ratings, and website.</p>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2PGEIVMd-NVp5Yil3Q5XjmEfbXLPhMHo&libraries=places&callback=initMap"
         async defer></script>
-	  
+	 <div id="findbanks">
+      Let's find the nearest financial help for you:
+    </div>
+
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Type in your desired address" type="text" />
+    </div>	  
   <div class="footer"><p><a href="homepage.html">Click here to go back to homepage</p></div>
   </body>
 </html>
