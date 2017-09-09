@@ -135,7 +135,7 @@
 
   <body>
 
-<!--     <div id="findbanks">
+  <div id="findbanks">
       Let's find the nearest financial help for you:
     </div>
 
@@ -163,7 +163,7 @@
       </select>
     </div>
     
-    
+    <div id="map"></div>
 
    
 
@@ -193,7 +193,7 @@
         </table>
       </div>
     </div>
-   <div id="map"></div> -->
+   
     <script>
       // This example uses the autocomplete feature of the Google Places API.
       // It allows the user to find all hotels in a given place, within a given
@@ -472,65 +472,9 @@
       }
     </script>
     
-        <div id="findbanks">
-      Let's find the nearest financial help for you:
-    </div>
+     
 
-    <div id="locationField">
-      <input id="autocomplete" placeholder="Type in your desired address" type="text" />
-    </div>
 
-	  
-    <div id="controls">
-      <select id="country">
-        <option value="all">All</option>
-        <option value="au">Australia</option>
-        <option value="br">Brazil</option>
-        <option value="ca">Canada</option>
-        <option value="fr">France</option>
-        <option value="de">Germany</option>
-        <option value="mx">Mexico</option>
-        <option value="nz">New Zealand</option>
-        <option value="it">Italy</option>
-        <option value="za">South Africa</option>
-        <option value="es">Spain</option>
-        <option value="pt">Portugal</option>
-        <option value="us" selected>U.S.A.</option>
-        <option value="uk">United Kingdom</option>
-      </select>
-    </div>
-    
-    
-
-   
-
-    <div style="display: none">
-      <div id="info-content">
-        <table>
-          <tr id="iw-url-row" class="iw_table_row">
-            <td id="iw-icon" class="iw_table_icon"></td>
-            <td id="iw-url"></td>
-          </tr>
-          <tr id="iw-address-row" class="iw_table_row">
-            <td class="iw_attribute_name">Address:</td>
-            <td id="iw-address"></td>
-          </tr>
-          <tr id="iw-phone-row" class="iw_table_row">
-            <td class="iw_attribute_name">Telephone:</td>
-            <td id="iw-phone"></td>
-          </tr>
-          <tr id="iw-rating-row" class="iw_table_row">
-            <td class="iw_attribute_name">Rating:</td>
-            <td id="iw-rating"></td>
-          </tr>
-          <tr id="iw-website-row" class="iw_table_row">
-            <td class="iw_attribute_name">Website:</td>
-            <td id="iw-website"></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-   <div id="map"></div>
     <p class="explain"> This is a financial map! We know planning and managing finances by yourself can be overwhelming. So you can just visit this page, type in an address, and all the financial advisors, bankers, and ATMs that are close to that address will show up on this map. You can click on the piggy bank icon to get more information on that financial service- their address, ratings, and website.</p>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2PGEIVMd-NVp5Yil3Q5XjmEfbXLPhMHo&libraries=places&callback=initMap"
         async defer></script>
