@@ -11,7 +11,17 @@
       /* Optional: Makes the sample page fill the window. */
       .hthree{font-weight: bold; color:#191970; font: 20px Montserrat, sans-serif;
 }
-      html, body {
+	    
+	.footer {
+	  position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  padding: 1rem;
+	  background-color: #efefef;
+	  text-align: center;
+	}
+	      html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -150,7 +160,7 @@
       </select>
     </div>
 
-	  <div id="map"><p> <br> <a href="homepage.html">Click here to go back to homepage/></p></div>
+	  <div id="map"></div>
 
     <div style="display: none">
       <div id="info-content">
@@ -461,6 +471,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2PGEIVMd-NVp5Yil3Q5XjmEfbXLPhMHo&libraries=places&callback=initMap"
         async defer></script>
 	  
-  
+  <div class="footer"><p><a href="homepage.html">Click here to go back to homepage/></p></div>
   </body>
 </html>
