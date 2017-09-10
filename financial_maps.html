@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Place Autocomplete Hotel Search</title>
+    <title>Financial Map</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -23,7 +23,7 @@
 	  font-weight: bold; color:#191970; font: 20px Montserrat, sans-serif;
 		
 	}
-	      html, body {
+     html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -164,7 +164,11 @@
     </div>
     
     <div id="map"></div>
-
+    <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
    
 
     <div style="display: none">
@@ -394,11 +398,11 @@
         icon.setAttribute('class', 'placeIcon');
         icon.setAttribute('className', 'placeIcon');
 	var name = document.createTextNode(result.name);}
-        iconTd.appendChild(icon);
-        nameTd.appendChild(name);
-        tr.appendChild(iconTd);
-        tr.appendChild(nameTd);
-        results.appendChild(tr);
+//         iconTd.appendChild(icon);
+//         nameTd.appendChild(name);
+//         tr.appendChild(iconTd);
+//         tr.appendChild(nameTd);
+//         results.appendChild(tr);
       
       function clearResults() {
         var results = document.getElementById('results');
