@@ -22,7 +22,7 @@
 
         <link rel="stylesheet" type="text/css" href="Main.css">
 
-        <script>
+<!--         <script>
             function logIn()
             {
                 var Container = document.getElementById("container");
@@ -35,13 +35,13 @@
                 var Container = document.getElementById("container");
                 Container.innerHTML =
                     '<ul class="nav nav-pills nav-stacked"><button id="generalNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#home">Home</a></button><button id="generalNav2" type="button" class="btn btn-default" onclick="logIn()"><a data-toggle="tab" href="#LogIn">Log In</a></button><button id="generalNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateAccount">Create Account</a></button></ul>'
-            }
+            } -->
         </script>
         <script src="js/mustache.js"></script>
     </head>
 
     <body onload="getRecipe()">
-        <div id="mySidenav" class="sidenav"> <!--https://www.w3schools.com/howto/howto_js_sidenav.asp-->
+<!--         <div id="mySidenav" class="sidenav"> <!--https://www.w3schools.com/howto/howto_js_sidenav.asp-->
             <!-- <img id="broccoliLeft" src="broccoli.png"> -->
             <div id ="container" class="container">
                 <ul class="nav nav-pills nav-stacked">
@@ -58,7 +58,7 @@
 
         <div class="topnav navbar-fixed top" id="myTopnav"> <!--https://www.w3schools.com/howto/howto_js_topnav.asp-->
 
-        </div>
+        </div> -->
 
         <div id="main">
             <h1 id="header">YumTown</h1><br><br>
@@ -163,26 +163,26 @@
 
 	           </script>
 
-             <pre id="spoonacular-ingredients" style="display:none">
+<!--              <pre id="spoonacular-ingredients" style="display:none">
 
              </pre>
              <div id='demo1'></div>
              <script>
-
+ -->
              // document.getElementById('demo1').innerHTML=servings;
              // var obj = ["1 cup chocolate chips","2 eggs","1.5 cup flour","1 cup sugar","1/2 cup butter","1 tsp baking powder","1 tbsp cocoa"]
-             for(i = 0; i < ingredients.length; i++){
-                     $('#spoonacular-ingredients').append(ingredients[i]+"\n");}
-            console.log(ingredients);
-             // document.getElementById('spoonacular-ingredients').innerText= '1 cup milk' ;
-             </script>
-              <div id="spoonacular-price-estimator"></div>
-              <script type="text/javascript">
-               spoonacularServings = servings;
-               var spoonacularPriceView = 2;
-              </script>
-             <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-             <script type="text/javascript" src="https://spoonacular.com/cdn/spoonacular-1.6.min.js"></script>
+//              for(i = 0; i < ingredients.length; i++){
+//                      $('#spoonacular-ingredients').append(ingredients[i]+"\n");}
+//             console.log(ingredients);
+//              // document.getElementById('spoonacular-ingredients').innerText= '1 cup milk' ;
+//              </script>
+//               <div id="spoonacular-price-estimator"></div>
+//               <script type="text/javascript">
+//                spoonacularServings = servings;
+//                var spoonacularPriceView = 2;
+//               </script>
+//              <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+//              <script type="text/javascript" src="https://spoonacular.com/cdn/spoonacular-1.6.min.js"></script>
 
     </body>
 </html>
