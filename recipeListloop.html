@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+        <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    <body>
+      <script>
+      // function searchDish(){
+      //   var userInput = document.getElementById('search1').value;
+      //   document.getElementById('search2').innerHTML = userInput;
+      // }
+      // $(document).ready(function(){
+      //   $('#submit').click(getRecipeList);
+      // })
+      function getRecipeList() {
+
+          var searchText= document.getElementById('search1').value;
+          var searchText1= searchText.split(' ').join('+');
+          // alert(searchText);
+          // alert(searchText1);
+          // var apiKey = "your-api-key-here";
+          // var any_kw = "chicken";
+          var url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?&limitLicense=false&number=12&offset=0&query="+searchText1;
+          // .header("X-Mashape-Key", "KPcwDkFQicmshdW99jxJxJaXyBZ1p1VgGiGjsnKS43zN1TMUJm")
+          $.ajax({
+                  type: "GET",
+                  dataType: 'json',
+                  cache: false,
+                  url: url,
+                  headers: {
+                    "X-Mashape-Key": "KPcwDkFQicmshdW99jxJxJaXyBZ1p1VgGiGjsnKS43zN1TMUJm"
+                  },
+                  success: function(data){
+
+                  console.log(data);
+                  var arr = [];
+                  var obj = data['results'];
+                  var imageURL = [];
+                  var arr1 =[];
+                  var idarr = [];
+                  for(var x in obj){
+                    arr.push(obj[x]['title']);
+                    imageURL.push(data['baseUri'] + obj[x]['image']);
+                    arr1.push(obj[x]['readyInMinutes']);
+                    idarr.push(obj[x]['id']);
+
+                  }
+                  // alert(arr1);
+                  $('#demo').empty();
+                  for(i = 0; i < obj.length; i++){
+
+
+                    $('#demo').append("<div class='card'>"+
+                          "<a href='"+"details.html?"+idarr[i]+"'>"+
+                          "<div class='card-image'>"+
+                          "<img src='"+imageURL[i]+"'/></a>"+
+                          "</div>"+
+                          "<h4 class='name'>"+arr[i]+"</h4>"+
+                          "<p class='time'>"+'Ready in '+ arr1[i]+ ' minutes'+"</p>"+
+                          "</div>");
+
+
+                  }
+                  // document.getElementById('name1').innerHTML = arr[0];
+                  // document.getElementById('image1').innerHTML= "<img src='"+imageURL[0]+"'>";
+                  // document.getElementById('time1').innerHTML = 'Ready in '+ arr1[0]+' minutes';
+                  //
+                  //
+                  // document.getElementById('name2').innerHTML = arr[1];
+                  // document.getElementById('image2').innerHTML= "<img src='"+imageURL[1]+"'>";
+                  // document.getElementById('time2').innerHTML = 'Ready in '+ arr1[1]+' minutes';
+                  //
+                  // document.getElementById('name3').innerHTML = arr[2];
+                  // document.getElementById('image3').innerHTML= "<img src='"+imageURL[2]+"'>";
+                  // document.getElementById('time3').innerHTML = 'Ready in '+ arr1[2]+' minutes';
+                  //
+                  // document.getElementById('name4').innerHTML = arr[3];
+                  // document.getElementById('image4').innerHTML= "<img src='"+imageURL[3]+"'>";
+                  // document.getElementById('time4').innerHTML = 'Ready in '+ arr1[3]+' minutes';
+                  //
+                  // document.getElementById('name5').innerHTML = arr[4];
+                  // document.getElementById('image5').innerHTML= "<img src='"+imageURL[4]+"'>";
+                  // document.getElementById('time5').innerHTML = 'Ready in '+ arr1[4]+' minutes';
+                  //
+                  // document.getElementById('name6').innerHTML = arr[5];
+                  // document.getElementById('image6').innerHTML= "<img src='"+imageURL[5]+"'>";
+                  // document.getElementById('time6').innerHTML = 'Ready in '+ arr1[5]+' minutes';
+                  //
+                  // document.getElementById('name7').innerHTML = arr[6];
+                  // document.getElementById('image7').innerHTML= "<img src='"+imageURL[6]+"'>";
+                  // document.getElementById('time7').innerHTML = 'Ready in '+ arr1[6]+' minutes';
+                  //
+                  // document.getElementById('name8').innerHTML = arr[7];
+                  // document.getElementById('image8').innerHTML= "<img src='"+imageURL[7]+"'>";
+                  // document.getElementById('time8').innerHTML = 'Ready in '+ arr1[7]+' minutes';
+                  //
+                  // document.getElementById('name9').innerHTML = arr[8];
+                  // document.getElementById('image9').innerHTML= "<img src='"+imageURL[8]+"'>";
+                  // document.getElementById('time9').innerHTML = 'Ready in '+ arr1[8]+' minutes';
+                  //
+                  // document.getElementById('name10').innerHTML = arr[9];
+                  // document.getElementById('image10').innerHTML= "<img src='"+imageURL[9]+"'>";
+                  // document.getElementById('time10').innerHTML = 'Ready in '+ arr1[9]+' minutes';
+                  //
+                  // document.getElementById('name11').innerHTML = arr[10];
+                  // document.getElementById('image11').innerHTML= "<img src='"+imageURL[10]+"'>";
+                  // document.getElementById('time11').innerHTML = 'Ready in '+ arr1[10]+' minutes';
+                  //
+                  // document.getElementById('name12').innerHTML = arr[11];
+                  // document.getElementById('image12').innerHTML= "<img src='"+imageURL[11]+"'>";
+                  // document.getElementById('time12').innerHTML = 'Ready in '+ arr1[11]+' minutes';
+              // var htmlContent="<ul>";
+              // for(var i =0; i<obj.length;i++){
+              //   var name = arr[i];
+              //   var url = imageURL[i];
+              //   htmlContent+="<li>"+name+"</p>"+"<img src='"+url+"'style='width:auto;height:auto;max-width:250px;max-width:250px;display:inline-block'>"+"</li>";
+              // }
+              // htmlContent += "</ul>";
+              // $('#demo').html(htmlContent);
+              // // document.getElementById('title').innerHTML= arr[3];
+              // // document.getElementById('time').innerHTML= 'ready in '+arr1[3]+' minutes';
+              // $(document).ready(function(){
+              //   $("submit").click(getRecipeList());
+              // })
+      }
+
+
+      });
+      }
+      </script>
+
+
+        <div id='demo' class="content float-left">
+          <!-- <div class="card">
+              <div class='card-image' id='image1'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name1"></h4>
+              <p class='time' id="time1"></p>
+          </div> -->
+
+          <!-- <div class="card">
+              <div class='card-image' id='image2'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name1"></h2> -->
+              <!-- </div>
+              <h4 class='name'id="name2"></h4>
+              <p class='time' id="time2"></p>
+          </div> -->
+
+          <!-- <div class="card">
+              <div class='card-image' id='image3'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name3"></h4>
+              <p class='time'id="time3"></p>
+          </div> -->
+
+          <!-- <div class="card">
+              <div class='card-image' id='image4'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name4"></h4>
+              <p class='time'id="time4"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image5'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name5"></h4>
+              <p class='time' id="time5"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image6'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name6"></h4>
+              <p class='time' id="time6"></p>
+          </div>
+
+          <div  class="card">
+              <div class='card-image' id='image7'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name7"></h4>
+              <p class='time' id="time7"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image8'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name'id="name8"></h4>
+              <p class='time' id="time8"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image9'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name9"></h4>
+              <p class='time' id="time9"></p>
+          </div>
+
+          <div class="card"> -->
+              <!-- <div class='card-image' id='image10'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name10"></h4>
+              <p class='time' id="time10"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image11'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name' id="name11"></h4>
+              <p class='time' id="time11"></p>
+          </div>
+
+          <div class="card">
+              <div class='card-image' id='image12'> -->
+                  <!-- <div class="banner"></div> -->
+                  <!-- <h2 id="name"></h2> -->
+              <!-- </div>
+              <h4 class='name'id="name12"></h4>
+              <p class='time' id="time12"></p>
+          </div>
+ -->
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="header">
+          <input type='text' value='search recipe'id='search1'></input>
+          <button style='color: darkred' onclick='getRecipeList()'id='submit'>Search</button>
+          <!-- <input type='text' value="search dish" id='search1'></input>
+          <button onclick="searchDish()">submit</button> -->
+
+        </div>
+
+        <div class="footer">
+            <!-- All images copyright 2013 <a href="http://tricedesigns.com/" target="_blank">Andrew Trice</a>. -->
+        </div>
+    </body>
+</html>
