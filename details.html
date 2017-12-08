@@ -23,19 +23,19 @@
         <link rel="stylesheet" type="text/css" href="Main.css">
 
         <script>
-            function logIn()
-            {
-                var Container = document.getElementById("container");
-                Container.innerHTML =
-                    '<ul class="nav nav-pills nav-stacked"><button id="loggedInNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#SearchDishes">Search Dishes</a></button><button id="loggedInNav2" type="button" class="btn btn-default"><a data-toggle="tab" href="#ViewSavedDishes">View Saved Dishes</a></button><button id="loggedInNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateNewRecipe">Create New Recipe</a></button><button id="loggedInNav4" type="button" class="btn btn-default"><a data-toggle="tab" href="#EditProfile">Edit Profile</a></button><button id="loggedInNav5" type="button" class="btn btn-default" onclick="logOut()"><a data-toggle="tab" href="#LogOut">Log Out</a></button></ul>'
-            }
+//             function logIn()
+//             {
+//                 var Container = document.getElementById("container");
+//                 Container.innerHTML =
+//                     '<ul class="nav nav-pills nav-stacked"><button id="loggedInNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#SearchDishes">Search Dishes</a></button><button id="loggedInNav2" type="button" class="btn btn-default"><a data-toggle="tab" href="#ViewSavedDishes">View Saved Dishes</a></button><button id="loggedInNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateNewRecipe">Create New Recipe</a></button><button id="loggedInNav4" type="button" class="btn btn-default"><a data-toggle="tab" href="#EditProfile">Edit Profile</a></button><button id="loggedInNav5" type="button" class="btn btn-default" onclick="logOut()"><a data-toggle="tab" href="#LogOut">Log Out</a></button></ul>'
+//             }
 
-            function logOut()
-            {
-                var Container = document.getElementById("container");
-                Container.innerHTML =
-                    '<ul class="nav nav-pills nav-stacked"><button id="generalNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#home">Home</a></button><button id="generalNav2" type="button" class="btn btn-default" onclick="logIn()"><a data-toggle="tab" href="#LogIn">Log In</a></button><button id="generalNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateAccount">Create Account</a></button></ul>'
-            }
+//             function logOut()
+//             {
+//                 var Container = document.getElementById("container");
+//                 Container.innerHTML =
+//                     '<ul class="nav nav-pills nav-stacked"><button id="generalNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#home">Home</a></button><button id="generalNav2" type="button" class="btn btn-default" onclick="logIn()"><a data-toggle="tab" href="#LogIn">Log In</a></button><button id="generalNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateAccount">Create Account</a></button></ul>'
+//             }
         </script>
         <script src="js/mustache.js"></script>
     </head>
@@ -43,13 +43,13 @@
     <body onload="getRecipe()">
      <div id="mySidenav" class="sidenav"> <!--https://www.w3schools.com/howto/howto_js_sidenav.asp-->
             <!-- <img id="broccoliLeft" src="broccoli.png"> -->
-            <div id ="container" class="container">
+<!--             <div id ="container" class="container">
                 <ul class="nav nav-pills nav-stacked">
                     <button id="generalNav1" type="button" class="btn btn-default"><a data-toggle="tab" href="#home">Home</a></button>
                     <button id="generalNav2" type="button" class="btn btn-default" onclick="logIn()"><a data-toggle="tab" href="#LogIn">Log In</a></button>
                     <button id="generalNav3" type="button" class="btn btn-default"><a data-toggle="tab" href="#CreateAccount">Create Account</a></button>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
         <div id="mySidenavRight" class="sidenavRight"> <!--https://www.w3schools.com/css/css_align.asp-->
