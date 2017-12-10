@@ -47,7 +47,7 @@ body {
 
 .footer {
     position:fixed;
-    height:25px;
+    height:35px;
     left:0px;
     right:0px;
     bottom:0px;
@@ -55,9 +55,9 @@ body {
     background:#FFF;
     color:darkred;
     text-align:center;
-    padding:10px 0px 0px 0px;
+    padding:5px 0px 0px 0px;
     border-top:5px solid darkred;
-    font-size:14px;
+    font-size:12px;
 }
 
 .float-left .card {
