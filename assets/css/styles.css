@@ -51,13 +51,13 @@ body {
     left:0px;
     right:0px;
     bottom:0px;
-    background-image: url('yumtown2.jpg');
-    /*background:#FFF;*/
-    color:darkred;
+/*     background-image: url('yumtown2.jpg'); */
+    background:#FFF;
+    color:white;
     text-align:center;
-    padding:5px 0px 0px 0px;
+    padding:10px 0px 0px 0px;
     border-top:5px solid darkred;
-    font-size:12px;
+    font-size:14px;
 }
 
 .float-left .card {
