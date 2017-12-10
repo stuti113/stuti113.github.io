@@ -47,13 +47,13 @@ body {
 
 .footer {
     position:fixed;
-    height:22px;
+    height:25px;
     left:0px;
     right:0px;
     bottom:0px;
 /*     background-image: url('yumtown2.jpg'); */
     background:#FFF;
-    color:darkred,
+    color:darkred;
     text-align:center;
     padding:10px 0px 0px 0px;
     border-top:5px solid darkred;
