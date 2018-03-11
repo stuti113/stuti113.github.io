@@ -187,7 +187,7 @@ body {
       <h5><span class="label label-success">Lorem</span></h5><br> -->
       <p id="newFont"> Before I could connect the data to tableau or upload the csv files into MATLAB or Pandas I decided to clean the data. I noticed there were a lot of un even or empty rows. I also noticed how the description was way too long and didn't contain information that I could use for the kind of insights I wante to draw. I decided to delete the description column and upload the the data in SSIS to practice and perform <b>extraction, transformation, and load(ETL)</b>
         Following is a screenshot describing the process. <br> <img src='5.Insights/SSIS.JPG'> </br> I used the first conditional split to get rid of the extra
-      rows that don't have sufficient information in the columns that I would need for getting my desired insights. I did this by using a boolean condition checking for empty columns. This got rid of <b>3323</b> rows. All of these were just leftover truncated data from that messy description column I manually removed. I then checked for skewed data to see what caused empty columns 15-26 by changing non empty columns. This got rid of <b>6 identical rows</b>. The leftover data was send to an OLE DB destination hence producing a Raw Data Table of records in SQL</p>
+      rows that don't have sufficient information in the columns that I would need for getting my desired insights. I did this by using a boolean condition checking for empty columns. This got rid of <b>3323</b> rows. All of these were just leftover truncated data from that messy description column I manually removed. I then checked for skewed data to see what caused empty columns 15-26 by changing non empty columns. This got rid of <b>6 identical rows</b>. The leftover data was send to an OLE DB destination hence producing a Raw Data Table of records in SQL
       <br></br>
     <p> The data cleaning and preparation didn't end here. My Udemy instructor Kirill Eremenko mentioned how ETL process often becomes TETL
         or TETLT instead of just ETL because we continue to prep and transfer data to get the most robust model. Before turning RAW Table into a WORK Table I check if empty Columns 15 through 26
@@ -208,8 +208,8 @@ body {
     <br> <img src="date.JPG"></br>
     I checked to make sure there is no data where the publish date is after trending date because that would have been an error or anomaly I wouldn't want to include in my study. 
     Fortunately all of my additional checks failed and didn't return any rows. At this point I felt my data was clean and I could proceed towards drawing insights from my data. 
-
-    </div>
+</p>
+    
     <hr>
 
     <h2 id="headingFont">Tour of the office space and Panel</h2>
