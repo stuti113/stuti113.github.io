@@ -265,7 +265,7 @@ and she already has 4 Million subscribers! And she used to work at Buzzfeed befo
     Nevertheless its very impressive that these self-made YouTubers are very close to these bigger
     channels. The Buzzfeed media company is a close second and getting most trending videos after 
     conventional TV shows. </li></ul>
-<li> The above observations got me thinking if number of trending videos is a good metric of YouTube Succcess. I 
+<li><h3> Total Views v/s Total Trending Videos</h3> The above observations got me thinking if number of trending videos is a good metric of YouTube Succcess. I 
     have also wondered if there is an correlation between videos of the trending page and the number of views those
     trending videos get.
 So I decided to compare the total number of views a channel gets to total number of  trending videos. I used the following SQL
@@ -286,6 +286,50 @@ department but he isn't in the top 10 when channels are ranked by total trending
 <img src="5.Insights/RankedByTrendingVids.png">
 </br>
 </li>
+<li> <h3> Like to Dislike Ration v/s Popularity </h3>
+    This analysis further got me thinking if hate gets you more views. So I decided to do a sum of likes to sum of dislikes ratio and compare 
+    it to total views. While I was in the process of doing this I encountered a division by zero error. This further got me thinking if I should exclude the 
+    videos with zero dislikes. But any videos with zero dislikes might not just have all likes. Maybe comments and ratings are disabled over all.
+</br>
+This would have further confirmed my conjecture that scandal and being disliked earns you more views. So first I decided to look at 
+the count of channels that actually, genuinely have no dislikes. 
+</br>
+<img src="5.Insights/ZeroDislikes.JPG">
+</br>
+<img src="5.Insights/Genuine)dislikes.JPG">
+</br>
+So turns out there are some genuinely not disliked channels, <b>341-212=129</b> to be precise. But these channels were not ver famous either.
+</br>
+I still wanted to establish a LD(like-to-dislike) ratio and do some research with it. So I decided to just put null for the columns where 
+the <b>denominator(sum of dislikes)=0</b>. I ran the tests and found the following:
+</br>
+<img src="5.Insights/RankedByLDRatio.png">
+</br>
+There are a lot of channels with very high LD ratio(i.e. way more likes than dislikes)
+but less than million views. For example <b>Kingsley</b> and <b>DanAndPhil</b> don't 
+necessarily have viral video level views but are in the top ten in LD ratio. 
+</br> 
+Now Let's look at the same graph but this time ranked by views.
+</br>
+<img src="5.Insights/LDViewsRankedByviews.png">
+</br>
+Notice how channels that have a single digit LD ratio are like <b>YouTube Spotlight</b>
+or <b> Logan Paul </b> have very high views. Another interesting observation os that 
+<b> Kylie Jenner </b> doesn't have a blue dot because she has her comments and ratings
+disabled yet she made it in the top 10 Ranked by Views graph.
+</li>
+
+<li> Multiple Linear Regression </li>
+
+My next task is going to be running a multiple linear regression algorithm to see the factors
+that effect the popularity of a video. I will be analzing video title, video category,
+tags, and channel name as my regressors and views as the the dependent variable.
+Stay tuned for my insights and results.
+
+
+
+
+
 </ul>
 
 
