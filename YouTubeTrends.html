@@ -192,20 +192,20 @@ body {
     <p> The data cleaning and preparation didn't end here. My Udemy instructor Kirill Eremenko mentioned how ETL process often becomes TETL
         or TETLT instead of just ETL because we continue to prep and transfer data to get the most robust model. Before turning RAW Table into a WORK Table I check if empty Columns 15 through 26
         were indeed empty and conditional split was indeed successful in removing all the skewed unecessary description. Turns out columns 15-26 are empty in the filtered out data so they were safe to discard without losing any rows. So now I proceeded towards making a WRK table using Procedures in SQL as follows:
-        <br> <img src="storedproc1.JPG"></br>
+        <br> <img src="5.Insights/storedproc1.JPG"></br>
     A <b>stored procedure</b> lets us create a WORK table using the RAW table. Upon executing this command I got the following error.
-    <br><img src="RAWWRKError.JPG"></br>
+    <br><img src="5.Insights/RAWWRKError.JPG"></br>
     Stored procedure was fully relying on <b>implicit conversion</b> by SQL but this error shows that there might just be some more anomalies in our data that we need to get rid of. Since it wasn't able to convert string to date 
     this tells me that there is a possibility that there is a record that still has some text instead of publish or trending date. Here is how I checked further.
-    <br><img src="notDate.JPG"><br>
+    <br><img src="5.Insights/notDate.JPG"><br>
     This command returned all the records that have texts in the dates columns> next thing, I deleted all of these records because trending date and publish date are crucial to my research and any records that don't have that information won't be of any use to me. 
-    <br><img src="removing_it.JPG"></br>
+    <br><img src="5.Insights/removing_it.JPG"></br>
     This command removed all those records and I now had <b>19772</b>. Before excluding these rows the data <b>19793</b> rows. So 21 records were removed.
     <br> </br>
     I did some additional checks to thoroughly check my data. They didn't return any anamolous rows but it's always good to do extra checks.
-    <br> <img src="views-likes.JPG"> </br> 
+    <br> <img src="5.Insights/views-likes.JPG"> </br> 
     Some times number of views is less than total likes and everyone is leaving comments like- "YouTube you'se drunk" or "YouTube be Trippin'" and I wanted to check for that lol.
-    <br> <img src="date.JPG"></br>
+    <br> <img src="5.Insights/date.JPG"></br>
     I checked to make sure there is no data where the publish date is after trending date because that would have been an error or anomaly I wouldn't want to include in my study. 
     Fortunately all of my additional checks failed and didn't return any rows. At this point I felt my data was clean and I could proceed towards drawing insights from my data. 
 </p>
