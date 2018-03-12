@@ -155,13 +155,13 @@ body {
       <h4>YouTube Videos Trends Project</h4>
       <ul class="nav nav-pills nav-stacked">
        <li class="active"><a href="homepage.html">Home</a></li>
-        <li><a href=>Data Prep</a></li>
-        <li><a href=>ETL</a></li>
-        <li><a href=>ETL(T)</a></li>
-        <li><a href=>Publish and Uploading Days</a></li>
-        <li><a href=>The Tops 10s</a></li>
-        <li><a href=>Total Views v/s Total Trending videos</a></li>
-        <li><a href=>Do hate and scandal get you trending?</a></li>
+        <li><a href="YouTubeTrends.html#dpc">Data Prep</a></li>
+        <li><a href="YouTubeTrends.html#dpc">ETL</a></li>
+        <li><a href="YouTubeTrends.html#ETLT">ETL(T)</a></li>
+        <li><a href="YouTubeTrends.html#pud">Publish and Uploading Days</a></li>
+        <li><a href="YouTubeTrends.html#myfav">The Tops 10s</a></li>
+        <li><a href="YouTubeTrends.html#TvsV">Total Views v/s Total Trending videos</a></li>
+        <li><a href="YouTubeTrends.html#hp">Do hate and scandal get you trending?</a></li>
 <!--         <li><a href="#section3">Financial Map</a></li> -->
 <!--       </ul><br> --> 
       <!-- <div class="input-group">
@@ -177,21 +177,21 @@ body {
     <div class="col-sm-9">
       <!-- <h4><small>RECENT POSTS</small></h4> -->
       <hr>
-      <h2 id="headingFont">Inspiration and Goal</h2>
+      <h2 id="ig">Inspiration and Goal</h2>
       <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
       <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
       <p id="newFont">I have been teaching myself data science and machine learning lately using MOOCs on coursera and Udemy. And I am perpetually watching YouTube videos! So I decided to acquire data about YouTube videos and run my newly learned DS and ML agorithms to derive insights from that data. My goal is to analyze and sort channels based on their views, trending videos, likes, and dislikes. I also wish to research factors that effect the popularity of a YouTube Video. I retrieved this data from <a href="https://www.kaggle.com/datasets">Kaggle</a>. Kaggle is a really good resource to get authentic data sets to play around and practice with. I did some data preparation and cleaning prior to mking insights to get rid of lengthy description column, skewed rows, and insufficient or incompete rows.</p>
 
       <!-- <h4><small>Best Welcome!</small></h4> -->
       <hr>
-      <h2 id="headingFont">Data Preparation and Cleaning</h2>
+      <h2 id="dpc">Data Preparation and Cleaning</h2>
       <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
       <h5><span class="label label-success">Lorem</span></h5><br> -->
       <p id="newFont"> Before I could connect the data to tableau or upload the csv files into MATLAB or Pandas I decided to clean the data. I noticed there were a lot of un even or empty rows. I also noticed how the description was way too long and didn't contain information that I could use for the kind of insights I wante to draw. I decided to delete the description column and upload the the data in SSIS to practice and perform <b>extraction, transformation, and load(ETL)</b>
         Following is a screenshot describing the process. <br> <img src='5.Insights/SSIS.JPG'> </br> I used the first conditional split to get rid of the extra
       rows that don't have sufficient information in the columns that I would need for getting my desired insights. I did this by using a boolean condition checking for empty columns. This got rid of <b>3323</b> rows. All of these were just leftover truncated data from that messy description column I manually removed. I then checked for skewed data to see what caused empty columns 15-26 by changing non empty columns. This got rid of <b>6 identical rows</b>. The leftover data was send to an OLE DB destination hence producing a Raw Data Table of records in SQL
       <br></br>
-    <p> The data cleaning and preparation didn't end here. My Udemy instructor Kirill Eremenko mentioned how ETL process often becomes TETL
+    <p id="ETLT"> The data cleaning and preparation didn't end here. My Udemy instructor Kirill Eremenko mentioned how ETL process often becomes TETL
         or TETLT instead of just ETL because we continue to prep and transfer data to get the most robust model. Before turning RAW Table into a WORK Table I check if empty Columns 15 through 26
         were indeed empty and conditional split was indeed successful in removing all the skewed unecessary description. Turns out columns 15-26 are empty in the filtered out data so they were safe to discard without losing any rows. So now I proceeded towards making a WRK table using Procedures in SQL as follows:
         <br> <img src="5.Insights/storedproc1.JPG"></br>
@@ -214,11 +214,11 @@ body {
     
     <hr>
 
-    <h2 id="headingFont">Data exploration, modelling, insights</h2>
+    <h2>Data exploration, modelling, insights</h2>
     <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
     <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
     <ul>
-        <li> <h3> Trending and Uploading Days</h3>
+        <li> <h3 id="pud"> Trending and Uploading Days</h3>
         <p> I have heard from a lot of social media enthusiasts like myself that there is a certain time in the day when one tends to get
             more likes and views. Some of my friends say weekday after 5  or during lunch are good times to change your fb profile picture
             because apparently that's prime browsing time. Some say saturday morning is a good time to grab likes and comments on an insta!
@@ -238,7 +238,7 @@ body {
 </br>
 </li>
 <li>
-    <h3>Popular Channels and My Favorite Channels</h3>
+    <h3 id='myfav'>Popular Channels and My Favorite Channels</h3>
     Another most common analysis that one tends to ponder about such data is how many channels have the most Trending videos. To my surprise(or oblivion)
     sports channels had the most Trending videos. Since I mostly watch comedy channels or sketch content creators this was interesting to me. Though all
     the funny late night videos were a close second. I used the following SQL query to get that data and then used Tableau to plot it.</br>
@@ -265,7 +265,7 @@ and she already has 4 Million subscribers! And she used to work at Buzzfeed befo
     Nevertheless its very impressive that these self-made YouTubers are very close to these bigger
     channels. The Buzzfeed media company is a close second and getting most trending videos after 
     conventional TV shows. </li></ul>
-<li><h3> Total Views v/s Total Trending Videos</h3> The above observations got me thinking if number of trending videos is a good metric of YouTube Succcess. I 
+<li><h3 id='TvsV'> Total Views v/s Total Trending Videos</h3> The above observations got me thinking if number of trending videos is a good metric of YouTube Succcess. I 
     have also wondered if there is an correlation between videos of the trending page and the number of views those
     trending videos get.
 So I decided to compare the total number of views a channel gets to total number of  trending videos. I used the following SQL
@@ -286,7 +286,7 @@ department but he isn't in the top 10 when channels are ranked by total trending
 <img src="5.Insights/RankedByTrendingVids.png">
 </br>
 </li>
-<li> <h3> Like to Dislike Ratio v/s Popularity </h3>
+<li> <h3 id='hp'> Like to Dislike Ratio v/s Popularity </h3>
     This analysis further got me thinking if hate gets you more views. So I decided to do a sum of likes to sum of dislikes ratio and compare 
     it to total views. While I was in the process of doing this I encountered a division by zero error. This further got me thinking if I should exclude the 
     videos with zero dislikes. But any videos with zero dislikes might not just have all likes. Maybe comments and ratings are disabled over all.
