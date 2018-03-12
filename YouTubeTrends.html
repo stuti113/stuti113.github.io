@@ -180,14 +180,14 @@ body {
       <h2 id="ig">Inspiration and Goal</h2>
       <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5> -->
       <!-- <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br> -->
-      <p id="newFont">I have been teaching myself data science and machine learning lately using MOOCs on coursera and Udemy. And I am perpetually watching YouTube videos! So I decided to acquire data about YouTube videos and run my newly learned DS and ML agorithms to derive insights from that data. My goal is to analyze and sort channels based on their views, trending videos, likes, and dislikes. I also wish to research factors that effect the popularity of a YouTube Video. I retrieved this data from <a href="https://www.kaggle.com/datasets">Kaggle</a>. Kaggle is a really good resource to get authentic data sets to play around and practice with. I did some data preparation and cleaning prior to mking insights to get rid of lengthy description column, skewed rows, and insufficient or incompete rows.</p>
+      <p id="newFont">I have been teaching myself data science and machine learning lately using MOOCs on Coursera and Udemy. And I am perpetually watching YouTube videos! So I decided to acquire data about YouTube videos and run my newly learned DS and ML agorithms to derive insights from that data. My goal is to analyze and sort channels based on their views, trending videos, likes, and dislikes. I also wish to research factors that effect the popularity of a YouTube Video. I retrieved this data from <a href="https://www.kaggle.com/datasets">Kaggle</a>. Kaggle is a really good resource to get authentic data sets to play around and practice with. I did some data preparation and cleaning prior to making insights to get rid of lengthy description column, skewed rows, and insufficient or incompete rows.</p>
 
       <!-- <h4><small>Best Welcome!</small></h4> -->
       <hr>
       <h2 id="dpc">Data Preparation and Cleaning</h2>
       <!-- <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
       <h5><span class="label label-success">Lorem</span></h5><br> -->
-      <p id="newFont"> Before I could connect the data to tableau or upload the csv files into MATLAB or Pandas I decided to clean the data. I noticed there were a lot of un even or empty rows. I also noticed how the description was way too long and didn't contain information that I could use for the kind of insights I wante to draw. I decided to delete the description column and upload the the data in SSIS to practice and perform <b>extraction, transformation, and load(ETL)</b>
+      <p id="newFont"> Before I could connect the data to tableau or upload the csv files into MATLAB or Pandas I decided to clean the data. I noticed there were a lot of uneven or empty rows. I also noticed how the description was way too long and didn't contain information that I could use for the kind of insights I wanted to draw. I decided to delete the description column and upload the the data in SSIS to practice and perform <b>extraction, transformation, and load(ETL)</b>
         Following is a screenshot describing the process. <br> <img src='5.Insights/SSIS.JPG'> </br> I used the first conditional split to get rid of the extra
       rows that don't have sufficient information in the columns that I would need for getting my desired insights. I did this by using a boolean condition checking for empty columns. This got rid of <b>3323</b> rows. All of these were just leftover truncated data from that messy description column I manually removed. I then checked for skewed data to see what caused empty columns 15-26 by changing non empty columns. This got rid of <b>6 identical rows</b>. The leftover data was send to an OLE DB destination hence producing a Raw Data Table of records in SQL
       <br></br>
@@ -220,15 +220,15 @@ body {
     <ul>
         <li> <h3 id="pud"> Trending and Uploading Days</h3>
         <p> I have heard from a lot of social media enthusiasts like myself that there is a certain time in the day when one tends to get
-            more likes and views. Some of my friends say weekday after 5  or during lunch are good times to change your fb profile picture
-            because apparently that's prime browsing time. Some say saturday morning is a good time to grab likes and comments on an insta!
+            more likes and views. Some of my friends say weekday after 5  or during lunch are good times to change your Facebook profile picture
+            because apparently that's prime browsing time. Some say Saturday morning is a good time to grab likes and comments on an Instagram!
             I always wondered if these rules apply to YouTube videos as well. So distributed the publish time along days of the week and found
             the following information.
             </br>
             <img src="5.Insights/UploadDays.png">
         </br>
         </br>
-        So it looks like people tend to upload the most on wednesdays. And since this is a data full of all videos that have trended at some point
+        So it looks like people tend to upload the most on Wednesdays. And since this is a data full of all videos that have trended at some point
         I am guessing they are on to something with this. I could see how people would want spend most time on YouTube on humpday.
         And it makes so much why most of my favorite YouTubers tend to post new videos on Wedensdays.</br>
         I also ran a similar test on trending dates and that data wasn't ver interesting or insightful to me. All it said was videos usually 
